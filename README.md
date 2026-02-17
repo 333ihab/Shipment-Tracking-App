@@ -45,6 +45,7 @@ Shipment-Tracking-App
 │ └── application.properties
 ├── .gitignore
 └── README.md
+
 ## Automatic Timestamp Handling
 The entity uses JPA lifecycle annotations:
 
@@ -52,12 +53,13 @@ The entity uses JPA lifecycle annotations:
 
 @PreUpdate updates updatedAt
 
-Learning Purpose
+## Learning Purpose
+
 This project was built to practice:
 
 Spring Boot fundamentals
 
-REST API development
+## REST API development
 
 JPA and Hibernate mappings
 
@@ -67,7 +69,7 @@ Lombok usage
 
 Entity lifecycle callbacks
 
-Possible Improvements
+## Possible Improvements
 Add Swagger/OpenAPI documentation
 
 Add Spring Security (authentication and authorization)
