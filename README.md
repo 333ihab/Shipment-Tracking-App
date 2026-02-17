@@ -82,6 +82,13 @@ Connect to a production database (MySQL/PostgreSQL)
 
 ---
 
+## Author
+GitHub: https://github.com/333ihab
+
+### License
+This project is open-source and available for learning and improvement.
+
+---
 ## How to Run the Project
 
 ### 1. Clone the Repository
@@ -127,8 +134,3 @@ Example Request (POST)
 
 
 
-Author
-GitHub: https://github.com/333ihab
-
-License
-This project is open-source and available for learning and improvement.
