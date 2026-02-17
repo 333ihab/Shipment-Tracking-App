@@ -1,21 +1,26 @@
 package com.example.shipment;
 
 import java.time.LocalDateTime;
-
 import jakarta.persistence.*;
+import lombok.*;
 
-@Entity(name="shipment")
+@Entity(name = "shipment")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Shipment {
-    @Id
-    @GeneratedValue
-    private  Long id;
 
-    @Column(nullable=false, unique=true)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false, unique = true)
     private String trackingNum;
 
     @Column(nullable = false)
     private String origin;
-
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -24,36 +29,27 @@ public class Shipment {
     @Column(nullable = false)
     private String destination;
 
-
-
-    @Column(nullable= false)
+    @Column(nullable = false)
     private LocalDateTime createdAt;
 
-    @Column(nullable= false)
+    @Column(nullable = false)
     private LocalDateTime updatedAt;
-
 
     private String currentLocation;
 
     private String estimatedDelivery;
 
-
     @PrePersist
-    protected void onCreate(){
-        createdAt=LocalDateTime.now();
-        updatedAt=LocalDateTime.now();
-            if (status==null){
-                status= ShipmentStatus.ORDER_PLACED;
-            }
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
+        if (status == null) {
+            status = ShipmentStatus.ORDER_PLACED;
+        }
     }
-
 
     @PreUpdate
-    protected void onUpdate(){
-        updatedAt= LocalDateTime.now();
-
-
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
     }
-
-
 }
