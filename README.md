@@ -45,7 +45,38 @@ Shipment-Tracking-App
 │ └── application.properties
 ├── .gitignore
 └── README.md
+## Automatic Timestamp Handling
+The entity uses JPA lifecycle annotations:
 
+@PrePersist sets createdAt and updatedAt
+
+@PreUpdate updates updatedAt
+
+Learning Purpose
+This project was built to practice:
+
+Spring Boot fundamentals
+
+REST API development
+
+JPA and Hibernate mappings
+
+Layered architecture
+
+Lombok usage
+
+Entity lifecycle callbacks
+
+Possible Improvements
+Add Swagger/OpenAPI documentation
+
+Add Spring Security (authentication and authorization)
+
+Add DTO layer and validation
+
+Add global exception handling
+
+Connect to a production database (MySQL/PostgreSQL)
 
 ---
 
@@ -91,38 +122,8 @@ Example Request (POST)
   "destination": "Rabat",
   "status": "ORDER_PLACED"
 }
-Automatic Timestamp Handling
-The entity uses JPA lifecycle annotations:
 
-@PrePersist sets createdAt and updatedAt
 
-@PreUpdate updates updatedAt
-
-Learning Purpose
-This project was built to practice:
-
-Spring Boot fundamentals
-
-REST API development
-
-JPA and Hibernate mappings
-
-Layered architecture
-
-Lombok usage
-
-Entity lifecycle callbacks
-
-Possible Improvements
-Add Swagger/OpenAPI documentation
-
-Add Spring Security (authentication and authorization)
-
-Add DTO layer and validation
-
-Add global exception handling
-
-Connect to a production database (MySQL/PostgreSQL)
 
 Author
 GitHub: https://github.com/333ihab
