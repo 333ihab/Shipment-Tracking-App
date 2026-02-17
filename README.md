@@ -63,7 +63,7 @@ mvn spring-boot:run
 Or run the generated JAR file:
 
 java -jar target/demo-0.0.1-SNAPSHOT.jar
-The application will start on:
+The application will start at:
 
 http://localhost:8080
 API Endpoints
@@ -124,11 +124,8 @@ Add global exception handling
 
 Connect to a production database (MySQL/PostgreSQL)
 
-
-
 Author
 GitHub: https://github.com/333ihab
 
 License
 This project is open-source and available for learning and improvement.
-
